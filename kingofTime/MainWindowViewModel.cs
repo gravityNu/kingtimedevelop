@@ -11,7 +11,7 @@ namespace kingofTime
 
         public string text
         {
-            get { return "text"; }
+            get { return "text!"; }
         }
     }
 }
