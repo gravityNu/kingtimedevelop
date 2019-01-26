@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using kingofTime.Views;
 
 namespace kingofTime
 {
@@ -13,5 +14,15 @@ namespace kingofTime
     /// </summary>
     public partial class App : Application
     {
+
+        [STAThread]
+        public static void Main()
+        {
+            var app = new App();
+            app.InitializeComponent();
+            var main = new MainWindowView();
+            app.Run(main);
+        }
+
     }
 }
