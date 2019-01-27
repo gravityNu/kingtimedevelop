@@ -29,6 +29,12 @@ namespace kingofTime.ViewsModels
             Html = Webscraping.GetHtml(url);
         }
 
+        public async void Login()
+        {
+            var login = new Login("test", "pass");
+            await login.LoginAsync(); 
+        }
+
 
     }
 }

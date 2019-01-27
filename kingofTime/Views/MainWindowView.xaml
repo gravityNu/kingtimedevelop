@@ -6,7 +6,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:prism="http://prismlibrary.com/"
     Title="kingofTime"
-    Width="800"
+    Width="1200"
     Height="800"
     prism:ViewModelLocator.AutoWireViewModel="True"
     Background="Black"
@@ -21,9 +21,11 @@
         </ResourceDictionary>
     </Window.Resources>
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition />
-            <RowDefinition />
             <RowDefinition />
             <RowDefinition Height="70" />
             <RowDefinition />
@@ -36,18 +38,6 @@
         </Border>
         <Border
             Grid.Row="1"
-            BorderBrush="White"
-            BorderThickness="1">
-            <TextBlock Text="{Binding text}" />
-        </Border>
-        <Border
-            Grid.Row="2"
-            BorderBrush="White"
-            BorderThickness="1">
-            <TextBlock Text="text" />
-        </Border>
-        <Border
-            Grid.Row="3"
             BorderBrush="White"
             BorderThickness="1">
             <StackPanel Orientation="Vertical">
@@ -68,13 +58,12 @@
             </StackPanel>
         </Border>
         <Border
-            Grid.Row="4"
+            Grid.Row="2"
             BorderBrush="White"
             BorderThickness="1">
             <TextBox
                 x:Name="tbHTML"
                 Background="Transparent"
-                BorderBrush="red"
                 BorderThickness="2"
                 Foreground="White"
                 Text="{Binding Html}"

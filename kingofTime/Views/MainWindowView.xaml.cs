@@ -37,6 +37,7 @@ namespace kingofTime.Views
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             viewModel.ReturnHTML(tbURL.Text);
+            viewModel.Login();
         }
     }
 }

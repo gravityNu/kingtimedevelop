@@ -78,6 +78,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Model\MainModel.cs" />
+    <Compile Include="Model\ReadDoc\Readoxps.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
     <Compile Include="Model\Webscraping.cs" />
     <Page Include="Views\MainWindowView.xaml">
@@ -120,5 +121,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
