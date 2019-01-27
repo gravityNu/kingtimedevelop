@@ -1,0 +1,84 @@
+﻿<Window
+    x:Class="kingofTime.Views.MainWindowView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:prism="http://prismlibrary.com/"
+    Title="kingofTime"
+    Width="800"
+    Height="800"
+    prism:ViewModelLocator.AutoWireViewModel="True"
+    Background="Black"
+    mc:Ignorable="d">
+    <Window.Resources>
+        <ResourceDictionary>
+            <Style TargetType="TextBlock">
+                <Setter Property="Foreground" Value="White" />
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="FontWeight" Value="Bold" />
+            </Style>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition Height="70" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Border
+            Grid.Row="0"
+            BorderBrush="White"
+            BorderThickness="1">
+            <TextBlock Text=" king of Time Automation" />
+        </Border>
+        <Border
+            Grid.Row="1"
+            BorderBrush="White"
+            BorderThickness="1">
+            <TextBlock Text="{Binding text}" />
+        </Border>
+        <Border
+            Grid.Row="2"
+            BorderBrush="White"
+            BorderThickness="1">
+            <TextBlock Text="text" />
+        </Border>
+        <Border
+            Grid.Row="3"
+            BorderBrush="White"
+            BorderThickness="1">
+            <StackPanel Orientation="Vertical">
+                <TextBlock Text="insertURL" />
+                <TextBox
+                    x:Name="tbURL"
+                    Height="20"
+                    Margin="10,5,10,0"
+                    HorizontalAlignment="Stretch"
+                    Text="https://s3.kingtime.jp/admin" />
+                <Button
+                    Height="20"
+                    Margin="10,5,10,0"
+                    Background="Gray"
+                    BorderThickness="0"
+                    Click="Button_Click"
+                    Content="GetHTML" />
+            </StackPanel>
+        </Border>
+        <Border
+            Grid.Row="4"
+            BorderBrush="White"
+            BorderThickness="1">
+            <TextBox
+                x:Name="tbHTML"
+                Background="Transparent"
+                BorderBrush="red"
+                BorderThickness="2"
+                Foreground="White"
+                Text="{Binding Html}"
+                VerticalScrollBarVisibility="Auto" />
+        </Border>
+    </Grid>
+</Window>
