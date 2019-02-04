@@ -39,5 +39,10 @@ namespace kingofTime.Views
             viewModel.ReturnHTML(tbURL.Text);
             viewModel.Login();
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            viewModel.LoadPDF("");
+        }
     }
 }

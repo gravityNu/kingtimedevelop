@@ -27,7 +27,7 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition />
-            <RowDefinition Height="70" />
+            <RowDefinition />
             <RowDefinition />
         </Grid.RowDefinitions>
         <Border
@@ -55,6 +55,13 @@
                     BorderThickness="0"
                     Click="Button_Click"
                     Content="GetHTML" />
+                <Button
+                    Height="20"
+                    Margin="10,5,10,0"
+                    Background="Gray"
+                    BorderThickness="0"
+                    Click="Button_Click_1"
+                    Content="LoadPDF" />
             </StackPanel>
         </Border>
         <Border

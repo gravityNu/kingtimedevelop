@@ -11,9 +11,14 @@ namespace kingofTime.ViewsModels
     public class MainWindowViewModel : BindableBase
     {
 
+        public MainModel model
+        {
+            get;set;
+        }
+
         public MainWindowViewModel()
         {
-
+            model = new MainModel();
         }
 
         private string m_html;
@@ -33,6 +38,12 @@ namespace kingofTime.ViewsModels
         {
             var login = new Login("test", "pass");
             await login.LoginAsync(); 
+        }
+
+        public void LoadPDF(string xx)
+        {
+            model.LoadPDF();
+            return;
         }
 
 
